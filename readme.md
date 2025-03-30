@@ -175,7 +175,7 @@ Contributions are welcome! Whether it's bug fixes, new features, or improvements
 ## 📬 Connect With Me
 - 👨‍💼 LinkedIn: [Ritwik Vinay](#)
 - 💻 GitHub: [Ritwik-vinay](#)
-- 📧 Email: your.email@example.com
+- 📧 Email: vinayritwik@gmail.com
 
 ---
 
