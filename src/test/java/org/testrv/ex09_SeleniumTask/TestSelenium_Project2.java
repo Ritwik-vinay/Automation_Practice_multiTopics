@@ -48,6 +48,7 @@ public class TestSelenium_Project2 extends TestSelenium_Waits {
 
         }
         System.out.println("Total Sum " + totalsum);
+        assertThat(totalsum.equals(1996.22));
 
     }
 
