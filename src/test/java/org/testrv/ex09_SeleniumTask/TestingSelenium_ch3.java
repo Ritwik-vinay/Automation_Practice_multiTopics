@@ -19,7 +19,9 @@ public class TestingSelenium_ch3 extends TestSele_Start_End_Browser {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-     //   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+       // driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src, 'googletagmanager.com/ns.html')]")));
+
+        //   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     //    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@id='edit-record-3']//*[name()='svg']//*[name()='path']")));
         WebElement editbutton= driver.findElement(By.xpath("//span[@id='edit-record-3']//*[name()='svg']"));
         editbutton.click();
