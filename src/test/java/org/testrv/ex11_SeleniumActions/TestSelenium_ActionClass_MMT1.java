@@ -30,24 +30,33 @@ public class TestSelenium_ActionClass_MMT1 extends TestSele_Start_End_Browser {
         Actions act = new Actions(driver);
         act.moveToElement(fromCity).click(fromCity)
                 .pause(Duration.ofSeconds(1))
-                .sendKeys("M")
-                .pause(Duration.ofMillis(200))
-                .sendKeys("U")
-                .pause(Duration.ofMillis(200))
-                .sendKeys("M")
+                .sendKeys("Mum")
                 .build()
                 .perform();
 
 
 
-        List<WebElement> cities = driver.findElements(By.xpath("//ul[@role='listbox']"));
+        List<WebElement> cities = driver.findElements(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li"));
         for (WebElement e : cities) {
-            System.out.println(e.getText());
-            if (e.getText().equalsIgnoreCase("Mumbai, India")) {
+
+            if (e.getText().contains("Mumbai")) {
                 e.click();
             }
         }
-        Thread.sleep(3000);
+        ////input[@placeholder='To']
+        WebElement tocity= driver.findElement(By.id("toCity"));
+        act.moveToElement(tocity).click(tocity)
+                .pause(Duration.ofSeconds(1))
+                .sendKeys("BLR")
+                .build()
+                .perform();
+        List<WebElement> tocities= driver.findElements(By.xpath("//li[@class='react-autosuggest__suggestion']/div"));
+        for (WebElement f:tocities){
+            if (f.getText().contains("Bangalore")){
+                f.click();
+            }
+        }
+
 
 
     }
