@@ -27,7 +27,7 @@ public class TestSelenium_Waits {
         driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
     }
 
-    public static void checkvisibility(WebDriver driver, By locator, int time) {
+    public static void checkvisibility(WebDriver driver, By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }

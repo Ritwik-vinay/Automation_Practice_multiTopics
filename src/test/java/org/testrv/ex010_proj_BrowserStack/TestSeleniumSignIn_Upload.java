@@ -19,14 +19,17 @@ public class TestSeleniumSignIn_Upload extends TestSele_Start_End_Browser {
     public void Test_UploadFlowEndtoEnd(){
 
        driver.get("https://app-automate.browserstack.com/dashboard/v2/introduction");
-        WebElement businessEmail=driver.findElement(By.xpath("//input[@placeholder='Business Email']"));
-        businessEmail.sendKeys("ritwikvinay38@gmail.com");
-        //Password
-        WebElement password=driver.findElement(By.xpath("//input[@placeholder='Password']"));
-        password.sendKeys("@BrowserStack123");
-        WebElement signupbtn= driver.findElement(By.id("user_submit"));
-        signupbtn.click();
-
+//        WebElement businessEmail=driver.findElement(By.xpath("//input[@placeholder='Business Email']"));
+//        businessEmail.sendKeys("ritwikvinay38@gmail.com");
+//        //Password
+//        WebElement password=driver.findElement(By.xpath("//input[@placeholder='Password']"));
+//        password.sendKeys("@BrowserStack123");
+//        WebElement signupbtn= driver.findElement(By.id("user_submit"));
+//        signupbtn.click();
+        WebElement googlebtn= driver.findElement(By.xpath("//a[@class='btn btn-secondary-gray col-center oauth-btn google-logo-btn']"));
+        googlebtn.click();
+       WebElement emailid=driver.findElement(By.cssSelector("input[id='identifierId']"));
+       
 
 
         TestSelenium_Waits.JVMwait(5000);
