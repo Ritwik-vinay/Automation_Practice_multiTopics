@@ -33,8 +33,6 @@ public class locators {
                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
                 scrollToProduct.findElements(By.xpath("//a[@class='btn btn-default add-to-cart'] "));
 
-
-
             }
         }
         driver.quit();
