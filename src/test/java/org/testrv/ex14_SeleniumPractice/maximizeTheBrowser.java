@@ -1,4 +1,4 @@
-package org.testrv.base;
+package org.testrv.ex14_SeleniumPractice;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
